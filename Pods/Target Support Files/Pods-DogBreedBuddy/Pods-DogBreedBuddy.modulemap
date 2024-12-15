@@ -1,0 +1,6 @@
+framework module Pods_DogBreedBuddy {
+  umbrella header "Pods-DogBreedBuddy-umbrella.h"
+
+  export *
+  module * { export * }
+}
