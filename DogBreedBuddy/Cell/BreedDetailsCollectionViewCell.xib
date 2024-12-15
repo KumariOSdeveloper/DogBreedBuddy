@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BreedDetailsCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="BreedDetailsCollectionViewCell" customModule="DogBreedFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="135"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="181" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwt-xv-nzX">
+                        <rect key="frame" x="5" y="5" width="171" height="125"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-vu-os6">
+                                <rect key="frame" x="0.0" y="0.0" width="171" height="125"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4L-41-5sZ">
+                                <rect key="frame" x="133" y="11" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ci6-1L-Sm0"/>
+                                    <constraint firstAttribute="width" constant="30" id="Swx-gC-GO4"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="likeAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="pu6-Fp-5hV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hdD-vu-os6" secondAttribute="trailing" id="Du9-7w-fx8"/>
+                            <constraint firstItem="hdD-vu-os6" firstAttribute="top" secondItem="Fwt-xv-nzX" secondAttribute="top" id="USa-Z6-1hm"/>
+                            <constraint firstItem="D4L-41-5sZ" firstAttribute="top" secondItem="Fwt-xv-nzX" secondAttribute="top" constant="11" id="W13-sB-PUK"/>
+                            <constraint firstItem="hdD-vu-os6" firstAttribute="leading" secondItem="Fwt-xv-nzX" secondAttribute="leading" id="f4l-zN-HFK"/>
+                            <constraint firstAttribute="bottom" secondItem="hdD-vu-os6" secondAttribute="bottom" id="nka-n7-nhP"/>
+                            <constraint firstAttribute="trailing" secondItem="D4L-41-5sZ" secondAttribute="trailing" constant="8" id="tXv-7D-q8u"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Fwt-xv-nzX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="EoU-9j-8kr"/>
+                <constraint firstAttribute="trailing" secondItem="Fwt-xv-nzX" secondAttribute="trailing" constant="5" id="tLQ-qW-CU4"/>
+                <constraint firstItem="Fwt-xv-nzX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="vBs-Ug-ZZZ"/>
+                <constraint firstAttribute="bottom" secondItem="Fwt-xv-nzX" secondAttribute="bottom" constant="5" id="zjF-Zs-pQJ"/>
+            </constraints>
+            <size key="customSize" width="181" height="135"/>
+            <connections>
+                <outlet property="dogImageView" destination="hdD-vu-os6" id="K24-MP-kL3"/>
+                <outlet property="likeButton" destination="D4L-41-5sZ" id="3AW-7K-cQc"/>
+            </connections>
+            <point key="canvasLocation" x="208.3969465648855" y="17.253521126760564"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

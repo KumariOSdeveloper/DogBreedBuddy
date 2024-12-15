@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eYz-i6-arL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogListViewController" customModule="DogBreedFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kqy-po-gPP">
+                                <rect key="frame" x="0.0" y="168" width="393" height="650"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BreedCell" id="TUx-uv-9FR">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TUx-uv-9FR" id="M4d-8m-5Aa">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9D-5Y-hV7">
+                                <rect key="frame" x="199.66666666666663" y="113" width="173.33333333333337" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Favorite Collections"/>
+                                <connections>
+                                    <action selector="favoriteView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8mz-49-yXY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kqy-po-gPP" firstAttribute="top" secondItem="f9D-5Y-hV7" secondAttribute="bottom" constant="20" id="PAc-N6-K5K"/>
+                            <constraint firstItem="Kqy-po-gPP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SFE-4E-Jmn"/>
+                            <constraint firstItem="Kqy-po-gPP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zqo-cv-3Xt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9D-5Y-hV7" secondAttribute="trailing" constant="20" id="pUZ-zD-19Y"/>
+                            <constraint firstItem="Kqy-po-gPP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vHl-hI-lRa"/>
+                            <constraint firstItem="f9D-5Y-hV7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="vQQ-iI-P0g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TtV-HH-cCB"/>
+                    <connections>
+                        <outlet property="dogTableView" destination="Kqy-po-gPP" id="RQS-Td-ENF"/>
+                        <outlet property="favoriteButton" destination="f9D-5Y-hV7" id="Ccq-TP-pqn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078.6259541984732" y="-2.1126760563380285"/>
+        </scene>
+        <!--Breed Details View Controller-->
+        <scene sceneID="nNE-mu-SQE">
+            <objects>
+                <viewController storyboardIdentifier="BreedDetailsViewController" id="swE-yf-PMN" customClass="BreedDetailsViewController" customModule="DogBreedFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sBF-Fh-SIi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kK5-fU-CO3">
+                                <rect key="frame" x="0.0" y="79" width="393" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wRk-BL-wT5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AxS-d1-JOA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kK5-fU-CO3" firstAttribute="leading" secondItem="AxS-d1-JOA" secondAttribute="leading" id="5H3-S8-QJU"/>
+                            <constraint firstItem="AxS-d1-JOA" firstAttribute="bottom" secondItem="kK5-fU-CO3" secondAttribute="bottom" id="HVa-GA-rt6"/>
+                            <constraint firstItem="AxS-d1-JOA" firstAttribute="trailing" secondItem="kK5-fU-CO3" secondAttribute="trailing" id="P74-VM-5DZ"/>
+                            <constraint firstItem="kK5-fU-CO3" firstAttribute="top" secondItem="AxS-d1-JOA" secondAttribute="top" constant="20" id="gLu-1d-rC3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OvU-w2-GOy"/>
+                    <connections>
+                        <outlet property="breedImageListCollectionView" destination="kK5-fU-CO3" id="AxT-A3-Xlt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgY-cV-lZN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082" y="344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YZP-wb-6JR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eYz-i6-arL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w4I-Qo-Bcz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r1Q-GW-f99"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6P3-b0-RkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.343511450381679" y="-2.1126760563380285"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="6vc-gF-ioJ">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="HFM-Hf-RFF" customClass="FavoriteViewController" customModule="DogBreedFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ESH-Hg-0xz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vhu-A4-Kdk">
+                                <rect key="frame" x="0.0" y="119.33333333333331" width="393" height="698.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tia-cY-Gx9">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-qw-qmd">
+                                <rect key="frame" x="10" y="69" width="373" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Y-rl-8t1">
+                                        <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Filtered by breed"/>
+                                        <connections>
+                                            <action selector="filteredByBreedAction:" destination="HFM-Hf-RFF" eventType="touchUpInside" id="HhK-va-yYK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TN9-qP-r1U">
+                                        <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tpq-EO-x09"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tpq-EO-x09" firstAttribute="trailing" secondItem="sbo-qw-qmd" secondAttribute="trailing" constant="10" id="AKd-fn-r8Z"/>
+                            <constraint firstItem="Vhu-A4-Kdk" firstAttribute="top" secondItem="sbo-qw-qmd" secondAttribute="bottom" constant="16" id="BQT-b1-WxG"/>
+                            <constraint firstItem="tpq-EO-x09" firstAttribute="trailing" secondItem="Vhu-A4-Kdk" secondAttribute="trailing" id="CK0-M8-egc"/>
+                            <constraint firstItem="tpq-EO-x09" firstAttribute="bottom" secondItem="Vhu-A4-Kdk" secondAttribute="bottom" id="Q5S-d2-LiV"/>
+                            <constraint firstItem="Vhu-A4-Kdk" firstAttribute="leading" secondItem="tpq-EO-x09" secondAttribute="leading" id="gkh-aQ-Ei4"/>
+                            <constraint firstItem="sbo-qw-qmd" firstAttribute="top" secondItem="tpq-EO-x09" secondAttribute="top" constant="10" id="iJx-ln-dn3"/>
+                            <constraint firstItem="sbo-qw-qmd" firstAttribute="leading" secondItem="tpq-EO-x09" secondAttribute="leading" constant="10" id="rpI-GG-Sr4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CIg-aV-FDh"/>
+                    <connections>
+                        <outlet property="breedFavoriteListCollectionView" destination="Vhu-A4-Kdk" id="dHJ-kA-403"/>
+                        <outlet property="filteredByBreed" destination="Q8Y-rl-8t1" id="S9z-mI-Yji"/>
+                        <outlet property="filteredLabel" destination="TN9-qP-r1U" id="JQr-ee-trG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOZ-2D-Lqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.6488549618321" y="-421.12676056338029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
