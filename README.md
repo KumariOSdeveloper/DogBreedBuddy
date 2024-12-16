@@ -12,14 +12,14 @@ DogBreedBuddy uses the Dog API to fetch information about hundreds of dog breeds
 GET 'https://dog.ceo/api/breeds/list' 
 GET 'https://dog.ceo/api/breed/{name}/images'
 
-Technologies Used
+## Technologies Used
 
 The app is built with the following:
-	•	Swift - programming language for iOS development.
-	•	UIKit - this is an iOS framework used to build user interface. The user interfaces were built using Storyboard, UITableView, UICollectionView.
-	•	Asynchronous URLSession - this is used to make calls to the API and to get responses / data which are then implemented in the app.
-	•	SDWebImage - This is a third party library which is asynchronous image downloader used to fetch random images from the URL endpoint and also provides caching.
-	•	UserDefault -  Implemented to save users' favorite breeds locally, allowing users to retain their preferences even after restarting the app.
+•Swift - programming language for iOS development.
+•UIKit - this is an iOS framework used to build user interface. The user interfaces were built using Storyboard, UITableView, UICollectionView.
+•Asynchronous URLSession - this is used to make calls to the API and to get responses / data which are then implemented in the app.
+•SDWebImage - This is a third party library which is asynchronous image downloader used to fetch random images from the URL endpoint and also provides caching.
+•UserDefault -  Implemented to save users' favorite breeds locally, allowing users to retain their preferences even after restarting the app.
 
 
 ## Installation
@@ -30,8 +30,8 @@ Xcode, Swift, Cocoapods
 
 # Installing
 
-	1	Clone the repository: (https://github.com/KumariOSdeveloper/DogBreedBuddy/tree/main)
-	2	Open the project in Xcode: cd DogBreedBuddy and then open DogBreedBuddy.xcworkspace
-	3	Then Build and Run the app in the Xcode simulator or on a connected device.
+1.Clone the repository: (https://github.com/KumariOSdeveloper/DogBreedBuddy/tree/main)
+2.Open the project in Xcode: cd DogBreedBuddy and then open DogBreedBuddy.xcworkspace
+3.Then Build and Run the app in the Xcode simulator or on a connected device.
 
 https://github.com/user-attachments/assets/2543198a-f6d4-4a08-9ff4-97896610566b
