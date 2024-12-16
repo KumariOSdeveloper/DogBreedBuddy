@@ -11,3 +11,5 @@ DogBreedBuddy uses the Dog API to fetch information about hundreds of dog breeds
 
 GET 'https://dog.ceo/api/breeds/list' 
 GET 'https://dog.ceo/api/breed/{name}/images'
+
+https://github.com/user-attachments/assets/2543198a-f6d4-4a08-9ff4-97896610566b
